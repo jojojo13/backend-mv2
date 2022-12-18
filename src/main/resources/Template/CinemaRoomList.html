@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Room List</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        margin: 5% auto;
+        margin-bottom: 0px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px gray;
+      }
+
+      #add-btn {
+        color: white;
+        background-color: #337AB7;
+        width: 120px;
+        font-weight: 700;
+        height: 40px;
+      }
+
+      .text-tb{
+        font-weight: 630; 
+        font-size: 15px;
+      }
+    </style>
+</head>
+<body>
+  <div class="wrapper" style="width: 1050px; margin-bottom: 0px; position: relative;">
+    <p class="text-title text-center mb-3 text-tb">Cinema Room List</p>
+    <hr/>
+    <div class="m-3"> 
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px;" class="text-tb">
+        <button type="submit" class="btn btn-block mx-1" id="add-btn"><i class="fa-solid fa-circle-plus"></i> Add new</button>
+        <div style="display: flex; justify-content: space-between;">
+          <label for="search" style="margin-right: 10px;">Search:</label>
+          <input type="text" id="search" name="search" style="width: 250px; border-radius: 7px; border: 1px solid #BEC8CF;">
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="text-tb" style="border-top: none;">#</th>
+            <th scope="col" class="text-tb" style="border-top: none;">Cinema room ID</th>
+            <th scope="col" class="text-tb" style="border-top: none;">Cinema room</th>
+            <th scope="col" class="text-tb" style="border-top: none;">Seat quality</th>
+            <th scope="col" class="text-tb" style="border-top: none;">Seat detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td class="text-primary">
+              <i class="fa-solid fa-circle-info"></i> Seat detail
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td class="text-primary">
+              <i class="fa-solid fa-circle-info"></i> Seat detail
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td class="text-primary">
+              <i class="fa-solid fa-circle-info"></i> Seat detail
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example" style="position: absolute; right: 15px; margin-top: 25px;">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link btn-primary" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascripst"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://kit.fontawesome.com/b774e32395.js" crossorigin="anonymous"></script>
+</body>
+</html>

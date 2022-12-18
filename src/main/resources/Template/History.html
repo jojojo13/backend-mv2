@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking ticket</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        margin: 5% auto;
+        margin-bottom: 0px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px gray;
+      }
+
+      .text-tb{
+        font-weight: 630; 
+        font-size: 15px;
+      }
+
+      label.error {
+        color: red;
+        font-size: 14px;
+        margin: 0px;
+      }
+
+      #btn-common {
+        color: white;
+        margin-left: 0px !important;
+        background-color: #337AB7;
+        margin-top: 15px;
+        width: 120px;
+        font-weight: 700;
+        font-size: 14px;
+        display: inline-block;
+        border-radius: 6px;
+      }
+      form span {
+        color: red;
+      }
+    </style>
+</head>
+<body>
+  <div class="wrapper" style="width: 1050px; margin-bottom: 0px; position: relative;">
+    <p class="text-title text-center mb-3 text-tb">History of score Adding/Using</p>
+    <hr/>
+    <div class="m-3"> 
+      <!-- <div style="align-items: center; margin-bottom: 50px;" class="text-tb">
+        <form name="form" id="form-submit" action="#">
+          <div class="form-group mb-3">
+              <label class="form-check-label text-tb" for="fromDate">From date:<span id="start"> *</span></label>
+              <input type="date" id="fromDate" class="form-control mb-1"  style="width: 30%;" required>
+          </div>
+          <div class="form-group mb-3">
+              <label class="form-check-label text-tb" for="toDate">To date:<span id="start"> *</span></label>
+              <input type="date" id="toDate" class="form-control mb-1" style="width: 30%;" required>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+          </div>
+          <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-check"></i> View score</button>
+      </form>
+      </div> -->
+      <div class="row">
+        <div class="col-5">
+          <form name="form" id="form-submit" action="#" style="margin: 35px;">
+              <div class="form-group mb-3 text-tb" style="display: flex; justify-content: space-between;">
+                  <label class="form-check-label text-tb" for="fromDate" style="width: 120px;">From date:<span id="start"> *</span></label>
+                  <input type="date" id="fromDate" class="form-control mb-1"  style="width: 250px;" required>
+              </div>
+              <div class="form-group mb-3 text-tb" style="display: flex; justify-content: space-between;">
+                  <label class="form-check-label text-tb" for="toDate" style="width: 120px;">To date:<span id="start"> *</span></label>
+                  <input type="date" id="toDate" class="form-control mb-1" style="width: 250px;" required>
+              </div>
+              <div style="margin-left: 110px;">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Or toggle this other</label>
+                </div>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-check"></i> View score</button>
+              </div>
+        </form> 
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="text-tb" style="border-top: none;">#</th>
+            <th scope="col" class="text-tb" style="border-top: none;">DATE CREATED</th>
+            <th scope="col" class="text-tb" style="border-top: none;">MOVIE NAME</th>
+            <th scope="col" class="text-tb" style="border-top: none;">ADDED SCORE</th>
+            <th scope="col" class="text-tb" style="border-top: none;">USE SCORE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example" style="position: absolute; right: 15px; margin-top: 25px;">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link btn-primary" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascripst"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://kit.fontawesome.com/b774e32395.js" crossorigin="anonymous"></script>
+</body>
+</html>

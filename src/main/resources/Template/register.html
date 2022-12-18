@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+        }
+
+        body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        }
+
+        .wrapper {
+        margin: 5% auto;
+        margin-bottom: 0px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px gray;
+        }
+
+        p {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+        }
+
+        span #start {
+        color: red;
+        font-weight: 400;
+        }
+
+        form {
+        padding: 0 20px;
+        padding-bottom: 10px;
+        }
+
+        form a,
+        form label {
+        font-size: 1rem;
+        }
+
+        form a {
+        text-decoration: none;
+        }
+
+        .wrapper form button {
+        font-size: 1.1rem;
+        font-weight: 500;
+        }
+
+        form span {
+        color: red;
+        }
+
+        label.error {
+        color: red;
+        font-size: 14px;
+        margin: 0px;
+        }
+
+        p.text-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        }
+
+        #acc-btn {
+        color: white;
+        background-color: #337AB7;
+        margin-top: 30px;
+        width: 400px;
+        }
+
+        #btn-common {
+        color: white;
+        margin-left: 0px !important;
+        background-color: #337AB7;
+        margin-top: 30px;
+        width: 116px;
+        font-weight: 700;
+        display: inline-block;
+        }
+
+        #switchLogin{
+        display: block;
+        text-align: center;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>        
+        <div class="wrapper" style="width: 476px; height: 685px;">
+            <p class="text-title">REGISTER ACCOUNT</p>
+            <form name="form" id="form-submit" action="#">
+                <div class="form-group mb-3 mx-3"><input type="text" name="account" id="account" class="form-control mb-1" placeholder="Account">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="password" size="50" name="password" id="password" class="form-control mb-1" placeholder="Password">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="password" size="50" name="repassword" id="repassword" class="form-control mb-1" placeholder="Confirm password">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="text" name="fullName" id="fullName" class="form-control mb-1" placeholder="Full name">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="date" name="dob" id="dob" class="form-control mb-1" placeholder="Date of birth">
+                </div>
+                <div class="form-group mb-3 mx-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Nam</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                      </div>
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="text" name="idCard" id="idCard" class="form-control mb-1" placeholder="Identity card">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="text" size="50" name="email" id="email" class="form-control mb-1" placeholder="E-mail">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="text" name="address" id="address" class="form-control mb-1" placeholder="Address">
+                </div>
+                <div class="form-group mb-3 mx-3"><input type="text" name="phone" id="phone" class="form-control mb-1" placeholder="Phone number">
+                </div>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="acc-btn">Register</button>
+            </form>
+        </div>
+        <p id="switchLogin">Have account already? <a href="../html/login.html"class="text-primary" style="text-decoration: underline;">Login</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascripst"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+</html>

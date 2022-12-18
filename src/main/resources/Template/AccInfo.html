@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acc Info</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+          }
+
+            body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            }
+
+            .wrapper {
+            margin: 5% auto;
+            margin-bottom: 0px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-shadow: 0px 0px 2px gray;
+            }
+
+            p {
+            font-size: 1.2rem;
+            padding: 8px 20px;
+            }
+
+            span #start {
+            color: red;
+            font-weight: 400;
+            }
+
+            form {
+            padding: 0 20px;
+            padding-bottom: 10px;
+            }
+
+            form a,
+            form label {
+            font-size: 1rem;
+            }
+
+            form a {
+            text-decoration: none;
+            }
+
+            .wrapper form button {
+            font-size: 1.1rem;
+            font-weight: 500;
+            }
+
+            form span {
+            color: red;
+            }
+
+            p.text-title {
+            text-align: center;
+            font-weight: 700;
+            font-size: 30px;
+            }
+
+            #acc-btn {
+            color: white;
+            background-color: #337AB7;
+            margin-top: 30px;
+            width: 400px;
+            }
+
+            #btn-common {
+            color: white;
+            margin-left: 0px !important;
+            background-color: #337AB7;
+            margin-top: 30px;
+            width: 116px;
+            font-weight: 700;
+            display: inline-block;
+            }
+    </style>
+</head>
+<body>
+    <div>        
+        <div class="wrapper" style="width: 700px; height:1150px; margin-bottom: 0px;">
+            <p class="text-title">Account Information</p>
+            <div style="width: 750px; height: 100px;">
+                <img src="avatar.jpg" class="rounded mx-auto d-block" alt="Avatar" style="height: 96px;">
+            </div>
+            <form name="form" id="form-submit" action="#">
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="eng">Account:<span id="start"> *</span></label>
+                    <input type="text" id="eng" class="form-control mb-1" placeholder="Account" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="eng">Password:<span id="start"> *</span></label>
+                    <input type="password" size="50" name="password" id="password" class="form-control mb-1" placeholder="Password"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="eng">Confirm password:<span id="start"> *</span></label>
+                    <input type="password" size="50" name="repassword" id="repassword" class="form-control mb-1" placeholder="Confirm password">
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="vn">Full name:<span id="start"> *</span></label>
+                    <input type="text" id="vn" class="form-control mb-1" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="dob">Date of birth:<span id="start"> *</span></label>
+                    <input type="date" id="dob" class="form-control mb-1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="gender">Gender:<span id="start">*</span></label> <br/>
+                    <div id="gender">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Nam</label>
+                          </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="actor">Identity card:<span id="start"> *</span></label>
+                    <input type="text" id="actor" class="form-control mb-1" placeholder="Identity card" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="actor">Email:<span id="start"> *</span></label>
+                    <input type="text" size="50" name="email" id="email" class="form-control mb-1" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="company">Address:<span id="start"> *</span></label>
+                    <input type="text" id="company" class="form-control mb-1" placeholder="Address" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label lb-text" for="actor">Phone number:<span id="start"> *</span></label>
+                    <input type="tel" id="actor" class="form-control mb-1" placeholder="Phone number" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="image">Image:<span id="start"> *</span></label>
+                    <br>
+                    <input type="file" id="image" name="image"/>
+                </div>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-check"></i>Save</button>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-xmark"></i> Back</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascripst"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://kit.fontawesome.com/b774e32395.js" crossorigin="anonymous"></script>
+</body>
+</html>

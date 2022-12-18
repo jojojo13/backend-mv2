@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+          }
+
+            body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            }
+
+            .wrapper {
+            margin: 5% auto;
+            margin-bottom: 0px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-shadow: 0px 0px 2px gray;
+            }
+
+            p {
+            font-size: 1.2rem;
+            padding: 8px 20px;
+            }
+
+            span #start {
+            color: red;
+            font-weight: 400;
+            }
+
+            form {
+            padding: 0 20px;
+            padding-bottom: 10px;
+            }
+
+            form a,
+            form label {
+            font-size: 1rem;
+            }
+
+            form a {
+            text-decoration: none;
+            }
+
+            .wrapper form button {
+            font-size: 1.1rem;
+            font-weight: 500;
+            }
+
+            form span {
+            color: red;
+            }
+
+            p.text-title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+            }
+
+            #acc-btn {
+            color: white;
+            background-color: #337AB7;
+            margin-top: 30px;
+            width: 400px;
+            }
+
+            #btn-common {
+            color: white;
+            margin-left: 0px !important;
+            background-color: #337AB7;
+            margin-top: 30px;
+            width: 116px;
+            font-weight: 700;
+            display: inline-block;
+            }        
+    </style>
+
+</head>
+<body>
+    <div>        
+        <div class="wrapper" style="width: 1050px; margin-bottom: 0px;">
+            <p class="text-title">Update Movie</p>
+            <hr/>
+            <form name="form" id="form-submit" action="#">
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="eng">Movie name (ENG):<span id="start"> *</span></label>
+                    <input type="text" id="eng" class="form-control mb-1" placeholder="movie name (ENG)" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="vn">Movie name (VN):<span id="start"> *</span></label>
+                    <input type="text" id="vn" class="form-control mb-1" placeholder="movie name (VN)" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="fromDate">From date:<span id="start"> *</span></label>
+                    <input type="date" id="fromDate" class="form-control mb-1" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="toDate">To date:<span id="start"> *</span></label>
+                    <input type="date" id="toDate" class="form-control mb-1" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="actor">Actor:<span id="start"> *</span></label>
+                    <input type="text" id="actor" class="form-control mb-1" placeholder="Actor" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="company">Movie Production Company:<span id="start"> *</span></label>
+                    <input type="text" id="company" class="form-control mb-1" placeholder="Movie Production Company" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="director">Director:<span id="start"> *</span></label>
+                    <input type="text" id="director" class="form-control mb-1" placeholder="Director" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="duration">Duration:<span id="start"> *</span></label>
+                    <input type="text" id="duration" class="form-control mb-1" placeholder="Duration" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="version">Version:<span id="start"> *</span></label>
+                    <input type="text" id="version" class="form-control mb-1" placeholder="Version" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="type" style="display: block; margin-bottom: 15px;">Type:<span id="start"> *</span></label>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Hành động</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Hài Hước</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Lãng mạng</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">Tình cảm</label>
+                              </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                              <label class="form-check-label" for="inlineCheckbox1">Hài hước</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                              <label class="form-check-label" for="inlineCheckbox2">Chiến tranh</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                              <label class="form-check-label" for="inlineCheckbox3">Phiêu lưu</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">Tình cảm</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Lãng mạng</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Kiếm hiệp</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Tâm lý 18+</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">Tình cảm</label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlSelect1">Cinema room:<span id="start"> *</span></label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="type" style="display: block; margin-bottom: 15px;">Schedule:<span id="start"> *</span></label>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">08:00</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">09:00</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">10:00</label>
+                              </div>
+                              <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">11:00</label>
+                              </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                              <label class="form-check-label" for="inlineCheckbox1">13:30</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                              <label class="form-check-label" for="inlineCheckbox2">14:30</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                              <label class="form-check-label" for="inlineCheckbox3">15:30</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">17:30</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">18:30</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">19:00</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">20:00</label>
+                            </div>
+                            <div class="form-check form-check-inline d-block">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox4">21:00</label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label lb-text" for="Content">Content:<span id="start"> *</span></label>
+                    <textarea class="form-control" id="Content" rows="2" placeholder="Content"></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="image">Image:<span id="start"> *</span></label>
+                    <br>
+                    <input type="file" id="image" name="image"/>
+                </div>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-check"></i>Save</button>
+                <button type="submit" class="btn btn-block mb-1 mx-3" id="btn-common"><i class="fa-solid fa-xmark"></i> Back</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascripst"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://kit.fontawesome.com/b774e32395.js" crossorigin="anonymous"></script>
+</body>
+</html>
