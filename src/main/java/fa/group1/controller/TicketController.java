@@ -32,11 +32,11 @@ public class TicketController {
         List<BookingListDTO> list = new ArrayList<>();
         for (Object a : ticketService.findAllTicket()) {
             String[] data = objectConverter.convert(a);
-            BookingListDTO bookingListDto = new BookingListDTO(Integer.valueOf(data[0]), Integer.valueOf(data[1]),
+           BookingListDTO bookingListDto = new BookingListDTO(Integer.valueOf(data[0]), Integer.valueOf(data[1]),
                     objectConverter.convertString(data[2]), objectConverter.convertString(data[3]),
                     objectConverter.convertString(data[4]), objectConverter.convertString(data[5]),
-                    Integer.valueOf(data[6]), objectConverter.convertDate(data[7]),
-                    objectConverter.convertString(data[8]), objectConverter.convertString(data[9]), Integer.valueOf(data[10]));
+                    objectConverter.convertDate(data[6]), objectConverter.convertString(data[7]),
+                    Integer.valueOf(data[8]), Integer.valueOf(data[9]), objectConverter.convertString(data[10]));
             list.add(bookingListDto);
         }
         List<BookingListDTO> lis = new ArrayList<>();
