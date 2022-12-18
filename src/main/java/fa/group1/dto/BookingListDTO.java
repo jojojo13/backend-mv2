@@ -27,13 +27,16 @@ public class BookingListDTO {
 	private String phoneNumber;
 
 	private String movieNameVN;
+	private String date;
+	private String seat;
+	private Integer ticketStatus;
 	private Integer movie_id;
 
-	private String date;
-	private String time;
-	private String seat;
 
-	private Integer ticketStatus;
+	private String time;
+
+
+
 
 
 
