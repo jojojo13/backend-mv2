@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+import fa.group1.dto.TicketByMonth;
 import fa.group1.entities.User;
 import fa.group1.exceptions.ResourceNotFoundException;
+import fa.group1.repository.MonthRepository;
 import fa.group1.utils.TokenAuthenticationUtils;
 
 import org.slf4j.Logger;
@@ -25,6 +27,8 @@ public class TicketServiceImpl implements TicketService {
 
     @Autowired
     private TicketRepository ticketRepository;
+    @Autowired
+    private MonthRepository monthRepository;
 
     @Autowired
     private UserRepository userRepository;
@@ -61,6 +65,11 @@ public class TicketServiceImpl implements TicketService {
         });
         t.setTicketType(1);
         return ticketRepository.save(t);
+    }
+
+    @Override
+    public List<TicketByMonth> getTotalTicketByMonth() {
+        return monthRepository.getTotalTicket();
     }
 
 }

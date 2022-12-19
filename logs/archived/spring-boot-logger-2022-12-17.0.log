@@ -1,37 +1,18 @@
-2022-12-19 10:58:42,184 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
-2022-12-19 10:58:50,190 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
-2022-12-19 10:59:18,375 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [fa.group1.dto.TicketByMonth]] with root cause
-org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [fa.group1.dto.TicketByMonth]
-	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:322)
-	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:195)
-	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:175)
-	at org.springframework.data.repository.query.ResultProcessor$ProjectingConverter.convert(ResultProcessor.java:313)
-	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.lambda$and$0(ResultProcessor.java:229)
-	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.convert(ResultProcessor.java:240)
-	at org.springframework.data.repository.query.ResultProcessor.processResult(ResultProcessor.java:156)
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:159)
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
-	at jdk.proxy4/jdk.proxy4.$Proxy137.getTotalTicket(Unknown Source)
-	at fa.group1.services.impl.TicketServiceImpl.getTotalTicketByMonth(TicketServiceImpl.java:69)
-	at fa.group1.controller.TicketController.getTotalTicket(TicketController.java:73)
+2022-12-16 09:28:47,178 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-2] Username is exsisted
+2022-12-16 09:29:16,112 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-3] Username is exsisted
+2022-12-16 09:29:34,790 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-4] Username is exsisted
+2022-12-16 09:44:12,358 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-1] Username is exsisted
+2022-12-16 10:08:43,703 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-2] Email is exsisted
+2022-12-16 10:09:30,193 ERROR fa.group1.services.impl.AuthServiceImpl [http-nio-8080-exec-3] Identity card is exsisted
+2022-12-17 22:29:13,711 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:29:16,780 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:30:01,883 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-1] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:30:49,671 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: ""08:00""] with root cause
+java.lang.NumberFormatException: For input string: ""08:00""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:654)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at fa.group1.controller.TicketController.manageTicket(TicketController.java:36)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
@@ -127,4 +108,8 @@ org.springframework.core.convert.ConverterNotFoundException: No converter found 
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-12-19 10:59:18,624 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-9] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:30:49,784 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:35:37,379 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:51:47,853 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-7] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 22:51:48,708 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-8] Unauthorized error: Full authentication is required to access this resource
+2022-12-17 23:48:30,662 ERROR fa.group1.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-3] Unauthorized error: Full authentication is required to access this resource

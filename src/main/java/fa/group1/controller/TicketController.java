@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import fa.group1.dto.TicketByMonth;
 import fa.group1.entities.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -66,5 +67,10 @@ public class TicketController {
         response.put("ticket",ticket);
         response.put("message","Confirm success");
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+    @GetMapping("total")
+    public ResponseEntity<?> getTotalTicket(){
+        List<TicketByMonth> list=ticketService.getTotalTicketByMonth();
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 }

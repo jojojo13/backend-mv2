@@ -2,6 +2,7 @@ package fa.group1.repository;
 
 import java.util.List;
 
+import fa.group1.dto.TicketByMonth;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -19,4 +20,6 @@ public interface TicketRepository extends JpaRepository<Ticket, Integer> {
 			+ "join Movie m on sm.movie.movieId = m.movieId " + "where t.user.accountId = :accountId " +
 			" group by m.movie_name_vn, t.bookingDate,t.price,t.ticketType")
 	List<BookedTicketDTO> getAllBookedTicket(Integer accountId);
+
+
 }
